@@ -11,8 +11,12 @@
 
     @include mobile {
       flex-direction: column;
-      align-items: start;
+      //align-items: start;
       row-gap: 20px;
+
+      &:has(.section__description) {
+        align-items: start !important;
+      }
     }
 
     &:has(.section__description) {
