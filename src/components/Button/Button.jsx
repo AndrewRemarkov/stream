@@ -11,7 +11,7 @@ const Button = (props) => {
     isLabelHidden = false,
     type = 'button',
     iconName,
-    /* '' (default) / 'transparent' / 'black-10' */
+    /* '' (default) / 'transparent' / 'black-10' / 'black-08' / 'block-06' */
     mode = '',
     /* 'before' / 'after' */
     iconPosition = 'before',

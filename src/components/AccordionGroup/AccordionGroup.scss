@@ -1,5 +1,7 @@
 .accordion-group {
   &--has-counter {
+    --accordionGroupCounterHeight: #{fluid(67, 46)};
+
     counter-reset: custom-color;
     list-style: none;
 
@@ -16,7 +18,7 @@
         font-weight: 600;
         color: var(--color-white);
         min-width: fluid(62, 42);
-        height: fluid(67, 46);
+        height: var(--accordionGroupCounterHeight);
         background-color: var(--color-black-12);
         border: var(--border);
         border-radius: var(--border-radius-m);
@@ -32,6 +34,26 @@
     }
   }
 
+  &--dark {
+    display: grid;
+    row-gap: fluid-to-laptop(20, 16);
+
+    .accordion-group__item {
+      padding: fluid(24, 16) fluid(50, 20);
+      background-color: var(--color-black-06);
+      border: var(--border);
+      border-radius: var(--border-radius-l);
+
+      @include laptop {
+        border-radius: var(--border-radius-m);
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
   &--2-columns {
     column-gap: fluid-to-laptop(80, 40);
 
@@ -43,7 +65,6 @@
   &__item {
     padding: fluid-to-laptop(34, 24);
     break-inside: avoid-column;
-    align-items: center;
     
     @include tablet-above {
       &--last-column-item {
