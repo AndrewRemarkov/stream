@@ -48,12 +48,18 @@
 
     &-links {
       display: flex;
-      column-gap: 20px;
+      column-gap: 10px;
     }
 
     &-link:not(:last-child) {
-      border-right: var(--border);
-      padding-right: 20px;
+      align-items: center;
+
+      &::after {
+        content: '';
+        height: 1em;
+        margin-inline: fluid-to-laptop(20, 16);
+        border-right: var(--border);
+      }
     }
   }
 }

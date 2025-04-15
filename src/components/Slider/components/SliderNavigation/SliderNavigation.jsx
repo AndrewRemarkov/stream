@@ -14,7 +14,8 @@ const SliderNavigation = (props) => {
     /* '' default / 'abs-bottom' */
     position = '',
     isHiddenMobile,
-    buttonMode = 'black-10'
+    buttonMode = 'black-10',
+    justifyContent
   } = props
 
   return (
@@ -22,6 +23,7 @@ const SliderNavigation = (props) => {
       className={classNames(className, 'slider-navigation', {
         [`slider-navigation--${mode}`]: mode,
         [`slider-navigation--${position}`]: position,
+        [`slider-navigation--${justifyContent}`]: justifyContent,
         'hidden-mobile': isHiddenMobile,
       })}
       id={id}

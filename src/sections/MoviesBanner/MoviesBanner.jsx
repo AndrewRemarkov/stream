@@ -35,6 +35,7 @@ const MoviesBanner = () => {
     >
       <h1 className="visually-hidden" id={titleId}>Movies & Shows</h1>
       <Slider
+        navigationJustifyContent='space-between'
         sliderParams={{
           sliderPerView: 1,
           breakpoints: {

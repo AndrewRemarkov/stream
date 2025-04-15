@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Stranger Things'
 }
 
-export default function () {
+export default () => {
   return (
     <>
       <ShowBanner />

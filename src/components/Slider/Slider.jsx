@@ -44,7 +44,8 @@ const Slider = (props) => {
     /* '' default / 'abs-bottom' */
     navigationPosition = '',
     navigationMode,
-    isNavigationHiddenMobile = true
+    isNavigationHiddenMobile = true,
+    navigationJustifyContent
   } = props
 
   return (
@@ -73,6 +74,7 @@ const Slider = (props) => {
           mode={navigationMode}
           position={navigationPosition}
           isHiddenMobile={isNavigationHiddenMobile}
+          justifyContent={navigationJustifyContent}
         />
       )}
 
